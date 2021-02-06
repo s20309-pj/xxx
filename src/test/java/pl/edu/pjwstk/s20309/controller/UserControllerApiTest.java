@@ -31,10 +31,6 @@ public class UserControllerApiTest {
         return "http://localhost:" + port;
     }
 
-    @Test
-    public void contextLoads() {
-
-    }
 
     @Test
     public void testGetAllEmployees() {
