@@ -55,7 +55,7 @@ public class TaskService {
 
     public Task save(Task saveTask) {
         taskRepository.findById(saveTask.getId()).ifPresent(task -> {
-            new TaskAlreadyExistException("User with id" + saveTask.getId() + "already exist");
+          throw  new TaskAlreadyExistException("User with id" + saveTask.getId() + "already exist");
         });
         saveTask.setTaskStatus(TaskStatus.TO_DO);
         return taskRepository.save(saveTask);
